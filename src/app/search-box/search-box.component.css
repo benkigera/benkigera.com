@@ -1,9 +1,11 @@
-input, button {
+input,
+button {
     border: solid 1px #555B6E;
     border-radius: 2px;
     display: inline-block;
     padding: 0;
 }
+
 input {
     width: 400px;
     height: 40px;
