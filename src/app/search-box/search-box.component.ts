@@ -10,6 +10,7 @@ export class SearchBoxComponent implements OnInit {
   buttonClicked = false
   views = '';
   url = '';
+  image='';
 
   constructor(private http: HttpClient) { }
 
@@ -32,9 +33,24 @@ export class SearchBoxComponent implements OnInit {
         , { responseType: 'text' }).subscribe(responsedata => {
           console.log(responsedata)
           this.views = responsedata;
-          this.buttonClicked = true
+          this.buttonClicked = true;
+          this.generateThumbnail()
         })
 
+
+  }
+
+  generateThumbnail() {
+    var urlString = 'https://benkigera.herokuapp.com/thumbnail/' + this.url.substring(this.url.length - 11);
+    
+    console.log(urlString);
+    //Send Http request
+    return this.http
+      .get(urlString
+        , { responseType: 'text' }).subscribe(responsedata => {
+          console.log(responsedata)
+          this.image = responsedata;
+        })
 
   }
 

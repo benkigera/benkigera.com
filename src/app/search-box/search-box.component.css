@@ -24,47 +24,57 @@ button {
     border-radius: 0 2px 2px 0;
 }
 
-div {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-}
 
-#searchbox{
+#terminal {
     width: 50%;
     margin: 0 auto;
 }
 
-#terminal{
-    width: 50%;
-    margin: 0 auto; 
-}
-
-button:hover{
+button:hover {
     color: darkblue;
     text-decoration: none;
 }
 
-#showViews{
+
+
+
+.row {
     
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color:black;
-    width: 50%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    text-decoration: line-through;
-    color: white;
+    align-items: center;
+    
     
 }
 
+.searchbox {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 460px;
+
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+}
+
+#showImage {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: auto;
+    color: black;
+    padding: 10px;
+}
