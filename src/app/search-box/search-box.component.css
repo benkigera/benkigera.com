@@ -1,0 +1,68 @@
+input, button {
+    border: solid 1px #555B6E;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0;
+}
+input {
+    width: 400px;
+    height: 40px;
+    border-radius: 2px 0 0 2px;
+    color: #888c9c;
+    border: solid 1px #888c9c;
+    padding: 0 5px 0 10px;
+}
+
+button {
+    width: 70px;
+    height: 42px;
+    background-color: #4468e8;
+    color: white;
+    border: solid 1px #4468e8;
+    border-radius: 0 2px 2px 0;
+}
+
+div {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+}
+
+#searchbox{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#terminal{
+    width: 50%;
+    margin: 0 auto; 
+}
+
+button:hover{
+    color: darkblue;
+    text-decoration: none;
+}
+
+#showViews{
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: line-through;
+    color: white;
+    
+}
+

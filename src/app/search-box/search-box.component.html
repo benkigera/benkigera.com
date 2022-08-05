@@ -1,0 +1,6 @@
+<div class="searchbox">
+    <input type="text" id="location-search"   (input)="onSubmit($event)" placeholder="Paste a Youtube video URL here" class="form-control">
+    <button (click)="searchForVideo()">Search</button>
+</div>
+
+<p id="showViews" *ngIf="buttonClicked">Video Name: {{views}}</p>
