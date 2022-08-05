@@ -1,0 +1,19 @@
+header {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 24pt;
+    border-bottom: solid .5px rgb(223, 223, 223);
+    color: #050e2e;
+}
+header {
+    padding-left: 50px;
+}
+header > img {
+    width: 28pt;
+    height: 29pt
+}
+
+section{
+    margin-top: 100px;
+}
+
