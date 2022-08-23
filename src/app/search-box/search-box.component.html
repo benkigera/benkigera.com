@@ -13,8 +13,16 @@
         <div class="image">
             <img id="showImage" *ngIf="buttonClicked" src="{{image}}" alt="">
         </div>
+
+        
         <div class="title">
-            <p id="showViews" *ngIf="buttonClicked">Video Name: {{views}}</p>
+            <p id="showViews" *ngIf="buttonClicked">Video Name: {{title}}</p>
+
+        <!--download button -->
+            <div class="row-download">
+                <button (click)="downloadVideo()" style="background-color: #4CAF50;">Download</button>
+            </div>
+        <!--download button -->
         </div>
     </div>
 

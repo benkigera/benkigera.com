@@ -8,9 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SearchBoxComponent implements OnInit {
   buttonClicked = false
-  views = '';
+  title = '';
   url = '';
-  image='';
+  image = '';
 
   constructor(private http: HttpClient) { }
 
@@ -32,7 +32,7 @@ export class SearchBoxComponent implements OnInit {
       .get(urlString
         , { responseType: 'text' }).subscribe(responsedata => {
           console.log(responsedata)
-          this.views = responsedata;
+          this.title = responsedata;
           this.buttonClicked = true;
           this.generateThumbnail()
         })
@@ -42,7 +42,7 @@ export class SearchBoxComponent implements OnInit {
 
   generateThumbnail() {
     var urlString = 'https://benkigera.herokuapp.com/thumbnail/' + this.url.substring(this.url.length - 11);
-    
+
     console.log(urlString);
     //Send Http request
     return this.http
@@ -52,6 +52,23 @@ export class SearchBoxComponent implements OnInit {
           this.image = responsedata;
         })
 
+  }
+
+  downloadVideo() {
+    var urlString = 'https://benkigera.herokuapp.com/downloadVideo/' + this.url.substring(this.url.length - 11);
+    console.log(urlString);
+    //Send Http request
+    //download video from url
+
+    return this.http.get(urlString, { responseType: 'blob' }).subscribe(data => {
+      var blob = new Blob([data], { type: 'video/mp4' });
+      var url = window.URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = this.title + '.mp4';
+      a.click();
+    });
+  
   }
 
 }

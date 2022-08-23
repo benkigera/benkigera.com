@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { TerminalComponent } from './terminal/terminal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SearchBoxComponent,
-    TerminalComponent
+    TerminalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

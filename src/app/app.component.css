@@ -17,3 +17,12 @@ section{
     margin-top: 100px;
 }
 
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+
